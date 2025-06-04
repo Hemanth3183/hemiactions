@@ -1,0 +1,8 @@
+name: first action
+on: [push, workflow_dispatch]
+jobs:
+  first_job:
+    runs-on: ubuntu-latest # Where should the job run?
+    steps: # What steps should the job perform?
+      - uses: actions/checkout@v4 # Check out the repository
+      - run: echo "Hello, World!"
