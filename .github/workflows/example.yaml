@@ -24,3 +24,11 @@ jobs:
           echo "This is a multi-line command"
           echo "It can run multiple commands in sequence"
           echo "Each command is executed in the same shell session"
+      
+      - name: "Install cowsay"
+        run: sudo apt-get install -y cowsay
+      
+      - name: "Run 3rd party cowsay action"
+        run: cowsay -f dragon "Run for cover!!! I am a fiery DRAGONNNNN!!!" >> dragon.txt
+
+      - run: cat dragon.txt
