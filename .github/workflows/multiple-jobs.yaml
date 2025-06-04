@@ -19,7 +19,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: repository-artifacts
-          path: ./*
+          path: .
 
   Test:
     runs-on: ubuntu-latest
