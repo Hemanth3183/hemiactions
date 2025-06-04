@@ -12,6 +12,9 @@ jobs:
       - name: "Build the project"
         run: echo "Building the project..."
 
+      - name: "Present working directory"
+        run: pwd
+
       - name: "List files in the repository"
         run: ls -altr
 
