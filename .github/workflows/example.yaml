@@ -5,16 +5,22 @@ jobs:
     runs-on: ubuntu-latest # Where should the job run?
     steps: # What steps should the job perform?
 
-      - name: Checkout repository # This step checks out the repository so that the workflow can access its contents.
+      - name: "Checkout repository" # This step checks out the repository so that the workflow can access its contents.
         uses: actions/checkout@v4 # Check out the repository
         with:
           fetch-depth: 0 # Fetch all history for all branches and tags
 
-      - name: Echo a message # This step runs a simple command to echo a message.
-        run: echo "Hello, World!" # Run the command to echo the message
+      # - name: Echo a message # This step runs a simple command to echo a message.
+      #   run: echo "Hello, World!" # Run the command to echo the message
 
-      - name: Run a command
-        run: ls -ltr
+      # - name: Run a command
+      #   run: ls -ltr
 
-      - name: Run a script
-        run: cat README.md
+      # - name: Run a script
+      #   run: cat README.md
+      
+      - name: "Run multi-line commands"
+        run: |
+          echo "This is a multi-line command"
+          echo "It can run multiple commands in sequence"
+          echo "Each command is executed in the same shell session"
