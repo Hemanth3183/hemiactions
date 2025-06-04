@@ -12,5 +12,8 @@ jobs:
       - name: "List files in the repository"
         run: ls -ltr
 
+      - name: "Set executable permission for the script"
+        run: chmod +x ./ascii-script.sh
+
       - name: "Run a shell script"
         run: ./ascii-script.sh
